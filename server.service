@@ -1,0 +1,15 @@
+Unit]
+Description=Super Simple Go Server
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+User=ubuntu
+Environment="PORT=9191"
+ExecStart="/path/to/server.linux"
+
+[Install]
+WantedBy=multi-user.target
